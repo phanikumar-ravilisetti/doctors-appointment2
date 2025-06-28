@@ -75,9 +75,7 @@ class DishItem extends Component {
           const {addCartItem, removeCartItem} = value
           return (
             <li className="dish-item-container">
-              <div className="veg-border">
-                <div className="veg-border"></div>
-              </div>
+              <div className="veg-border" />
               <div className="dish-details-container">
                 <h1 className="dish-name">{dishName}</h1>
                 <p className="dish-currency-price">

@@ -1,12 +1,11 @@
 import {Component} from 'react'
-import {Switch, Route} from 'react-router-dom'
-
-import Home from './components/Home'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import CartContext from './context/CartContext'
-
+import Login from './components/Login'
+import Home from './components/Home'
 import './App.css'
 
-//write your code here
+// write your code here
 class App extends Component {
   state = {cartList: []}
 
@@ -24,9 +23,8 @@ class App extends Component {
         )
 
         return {cartList: updatedCart}
-      } else {
-        return {cartList: [...prevState.cartList, dish]}
       }
+      return {cartList: [...prevState.cartList, dish]}
     })
   }
 
@@ -42,26 +40,21 @@ class App extends Component {
             eachDish => eachDish.dishId !== dish.dishId,
           )
           return {cartList: updatedCartList}
-        } else {
-          const updatedCartList = prevState.cartList.map(eachDish =>
-            eachDish.dishId === dish.dishId
-              ? {...eachDish, quantity: dish.quantity}
-              : eachDish,
-          )
-          return {cartList: updatedCartList}
         }
+        const updatedCartList = prevState.cartList.map(eachDish =>
+          eachDish.dishId === dish.dishId
+            ? {...eachDish, quantity: dish.quantity}
+            : eachDish,
+        )
+        return {cartList: updatedCartList}
       }
 
-      return null
+      return {cartList: [...prevState.cartList]}
     })
   }
 
   render() {
     const {cartList} = this.state
-    const cartListLength = cartList.length
-    if (cartListLength > 0) {
-      console.log(cartList[0].quantity)
-    }
 
     return (
       <CartContext.Provider
@@ -71,7 +64,12 @@ class App extends Component {
           removeCartItem: this.removeCartItem,
         }}
       >
-        <Home />)
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </BrowserRouter>
       </CartContext.Provider>
     )
   }

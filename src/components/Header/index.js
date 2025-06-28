@@ -11,7 +11,7 @@ class Header extends Component {
       {value => {
         const {cartList} = value
         const cartCount = cartList.reduce(
-          (total, item) => total + (item.quantity || 0),
+          (total, item) => total + item.quantity,
           0,
         )
         return (
