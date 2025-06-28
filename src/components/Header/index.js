@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 import CartContext from '../../context/CartContext'
 import './index.css'
@@ -16,9 +17,11 @@ class Header extends Component {
         )
         return (
           <div>
-            <button type="button">
-              <p>icon</p>
-            </button>
+            <Link to="/cart">
+              <button type="button">
+                <p>icon</p>
+              </button>
+            </Link>
 
             <div>
               <p>{cartCount}</p>

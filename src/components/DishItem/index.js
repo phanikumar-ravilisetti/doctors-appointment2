@@ -6,30 +6,20 @@ import './index.css'
 class DishItem extends Component {
   state = {quantity: 0}
 
-  onIncrementQuantity = addCartItem => {
-    this.setState(
-      prevState => ({quantity: prevState.quantity + 1}),
-      () => {
-        const {quantity} = this.state
-        const {dishDetails} = this.props
-
-        addCartItem({...dishDetails, quantity})
-      },
-    )
+  onAddItemToCart = addCartItem => {
+    const {dishDetails} = this.props
+    const {quantity} = this.state
+    addCartItem({...dishDetails, quantity})
   }
 
-  onDecrementQuantity = removeCartItem => {
-    this.setState(
-      prevState => ({
-        quantity: prevState.quantity > 0 ? prevState.quantity - 1 : 0,
-      }),
-      () => {
-        const {dishDetails} = this.props
-        const {quantity} = this.state
+  onIncrementQuantity = () => {
+    this.setState(prevState => ({quantity: prevState.quantity + 1}))
+  }
 
-        removeCartItem({...dishDetails, quantity})
-      },
-    )
+  onDecrementQuantity = () => {
+    this.setState(prevState => ({
+      quantity: prevState.quantity > 0 ? prevState.quantity - 1 : 0,
+    }))
   }
 
   renderControllerButton = (addCartItem, removeCartItem) => {
@@ -39,7 +29,7 @@ class DishItem extends Component {
         <button
           className="button"
           type="button"
-          onClick={() => this.onDecrementQuantity(removeCartItem)}
+          onClick={this.onDecrementQuantity}
         >
           -
         </button>
@@ -47,7 +37,7 @@ class DishItem extends Component {
         <button
           className="button"
           type="button"
-          onClick={() => this.onIncrementQuantity(addCartItem)}
+          onClick={this.onIncrementQuantity}
         >
           +
         </button>
@@ -84,8 +74,17 @@ class DishItem extends Component {
                 <p className="dish-description">{dishDescription}</p>
                 {dishAvailability &&
                   this.renderControllerButton(addCartItem, removeCartItem)}
+
                 {!dishAvailability && <p>Not available</p>}
                 {addonCat.length !== 0 && <p>Customizations available</p>}
+                {quantity > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => this.onAddItemToCart(addCartItem)}
+                  >
+                    ADD TO CART
+                  </button>
+                )}
               </div>
 
               <p className="dish-calories">{dishCalories} calories</p>
