@@ -1,5 +1,8 @@
+import {useContext} from 'react'
+
 import Header from '../Header/Header'
 import LandingPage from '../LandingPage/LandingPage'
+import HeadingContext from '../../context/HeadingContext'
 
 import {
   ContentPageContainer,
@@ -13,16 +16,14 @@ import {
 } from './styledComponents'
 
 function ContentPage() {
+  const {heading} = useContext(HeadingContext)
   return (
     <>
       <Header />
       <ContentPageContainer>
         <ContentPageImg1 src="https://res.cloudinary.com/dasuvkmgv/image/upload/v1752406988/Frame_26086340_1x_h1s7yd.png" />
         <ContentContainer>
-          <Content>
-            Hyper boost your Revenue Management, Marketing and Commercial
-            Functions with Business Ready AI
-          </Content>
+          <Content>{heading}</Content>
           <ContentDescription>
             Powerful AI solutions that go beyond mere data sorting and
             exploration. Use our array of AI enabled solutions that understand
