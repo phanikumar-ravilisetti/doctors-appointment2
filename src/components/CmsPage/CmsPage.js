@@ -21,7 +21,6 @@ function CmsPage() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({text}),
     })
-    alert('Heading successfully saved.')
   }
   return (
     <CmsContainer>

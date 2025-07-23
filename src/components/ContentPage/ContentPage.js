@@ -9,7 +9,6 @@ import {
   ContentPageImg1,
   ContentContainer,
   Content,
-  ContentSpan,
   ContentDescription,
   GetStartedBtn,
   ContentPageImg2,
