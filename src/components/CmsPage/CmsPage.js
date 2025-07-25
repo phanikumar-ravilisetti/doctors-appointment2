@@ -16,11 +16,14 @@ function CmsPage() {
 
   const onSubmitForm = async event => {
     event.preventDefault()
-    await fetch('http://localhost:3000/api/heading', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({text}),
-    })
+    await fetch(
+      'https://abc-company-backend-production.up.railway.app/api/heading/',
+      {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({heading: text}),
+      },
+    )
   }
   return (
     <CmsContainer>

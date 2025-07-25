@@ -1,8 +1,7 @@
-import {useContext} from 'react'
+import {useEffect, useState} from 'react'
 
 import Header from '../Header/Header'
 import LandingPage from '../LandingPage/LandingPage'
-import HeadingContext from '../../context/HeadingContext'
 
 import {
   ContentPageContainer,
@@ -15,7 +14,33 @@ import {
 } from './styledComponents'
 
 function ContentPage() {
-  const {heading} = useContext(HeadingContext)
+  const [heading, setHeading] = useState('')
+
+  useEffect(() => {
+    const fetchHeading = async () => {
+      try {
+        const response = await fetch(
+          'https://abc-company-backend-production.up.railway.app/api/heading/',
+          {
+            method: 'GET',
+          },
+        )
+
+        const data = await response.json()
+
+        if (data.length > 0) {
+          setHeading(data[0].heading)
+          console.log('Fetched heading:', data[0].heading)
+        } else {
+          console.log('No heading found in database.')
+        }
+      } catch (error) {
+        console.error('Error fetching heading:', error)
+      }
+    }
+
+    fetchHeading()
+  }, [])
   return (
     <>
       <Header />
