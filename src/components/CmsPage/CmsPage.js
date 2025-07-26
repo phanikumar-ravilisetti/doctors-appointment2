@@ -15,6 +15,7 @@ function CmsPage() {
   const [text, setText] = useState('')
 
   const onSubmitForm = async event => {
+    console.log(text)
     event.preventDefault()
     await fetch(
       'https://abc-company-backend-production.up.railway.app/api/heading/',

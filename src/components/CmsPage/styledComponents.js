@@ -9,7 +9,7 @@ export const CmsContainer = styled.div`
   align-items: center;
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   height: 300px;
   width: 700px;
   display: flex;
