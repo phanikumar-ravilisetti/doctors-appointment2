@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Ananya Reddy",
+    "specialization": "Cardiologist",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": true,
+    "aboutDoctor": "Dr. Ananya Reddy is a highly experienced cardiologist with 15 years of practice in treating heart conditions. She is known for her compassionate care."
+  },
+  {
+    "id": 2,
+    "name": "Dr. Kiran Patel",
+    "specialization": "Dermatologist",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": true,
+    "aboutDoctor": "Dr. Kiran Patel specializes in skin health and cosmetic treatments, offering advanced dermatological solutions to all age groups."
+  },
+  {
+    "id": 3,
+    "name": "Dr. Meera Sharma",
+    "specialization": "Neurologist",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": false,
+    "aboutDoctor": "Dr. Meera Sharma treats disorders of the brain and nervous system, including epilepsy and migraines. She has over 12 years of experience."
+  },
+  {
+    "id": 4,
+    "name": "Dr. Raghav Verma",
+    "specialization": "Orthopedic Surgeon",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": true,
+    "aboutDoctor": "Specializing in joint replacement and trauma care, Dr. Verma has helped thousands regain mobility and live pain-free."
+  },
+  {
+    "id": 5,
+    "name": "Dr. Sneha Kapoor",
+    "specialization": "Pediatrician",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": true,
+    "aboutDoctor": "Dr. Sneha Kapoor is dedicated to child health and wellness, focusing on immunizations, nutrition, and development."
+  },
+  {
+    "id": 6,
+    "name": "Dr. Arjun Rao",
+    "specialization": "ENT Specialist",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": false,
+    "aboutDoctor": "Dr. Arjun Rao treats ear, nose, and throat conditions using advanced diagnostic techniques and patient-centered care."
+  },
+  {
+    "id": 7,
+    "name": "Dr. Lakshmi Narayan",
+    "specialization": "Oncologist",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": true,
+    "aboutDoctor": "Dr. Lakshmi Narayan specializes in cancer treatment and is part of multiple national research programs for oncology breakthroughs."
+  },
+  {
+    "id": 8,
+    "name": "Dr. Vivek Nair",
+    "specialization": "Psychiatrist",
+    "profileImage": "https://res.cloudinary.com/dasuvkmgv/image/upload/v1754141115/296fe121-5dfa-43f4-98b5-db50019738a7_dtcsvy.jpg",
+    "available": true,
+    "aboutDoctor": "Dr. Vivek Nair is a mental health specialist helping patients manage anxiety, depression, and emotional well-being."
+  }
+]
